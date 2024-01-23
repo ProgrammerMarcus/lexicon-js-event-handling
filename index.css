@@ -1,0 +1,49 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    margin: 15svh auto 0 auto;
+    gap: 10px;
+
+    h1 {
+        margin: 0;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+
+        input {
+            border: none;
+            border-bottom: 1px solid black;
+            border-radius: 0;
+        }
+
+    }
+
+    button {
+        margin: auto auto auto 0;
+        padding: 0.6rem;
+        background-color: lightskyblue;
+        border-radius: 5px;
+        border: none;
+        font-weight: bold;
+        transition: 0.15s;
+    }
+
+    button:hover {
+        background-color: aliceblue;
+        cursor: pointer;
+    }
+
+    button:active {
+        background-color: black;
+        color: white;
+    }
+
+}
