@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .form {
@@ -23,7 +23,6 @@ body {
             border-bottom: 1px solid black;
             border-radius: 0;
         }
-
     }
 
     button {
@@ -46,4 +45,17 @@ body {
         color: white;
     }
 
+    button:disabled {
+        background-color: lightgrey;
+        cursor: default;
+        color: darkgray;
+    }
+
+    input.correct {
+        background-color: lightgreen;
+    }
+
+    input.incorrect {
+        background-color: lightcoral;
+    }
 }
