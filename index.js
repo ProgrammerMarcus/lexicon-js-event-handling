@@ -3,14 +3,14 @@
  */
 document.querySelector("#form").addEventListener("submit", (event) => {
     event.preventDefault();
-    const form = document.querySelector("#form")
+    const form = document.querySelector("#form");
     const registrationData = {
         name: form.querySelector("#formName").value,
         username: form.querySelector("#formUsername").value,
         email: form.querySelector("#formEmail").value,
         password: form.querySelector("#formPassword").value,
-    }
-    console.log(registrationData)
+    };
+    console.log(registrationData);
 });
 
 /**
@@ -49,11 +49,14 @@ formPasswordElements.forEach((element) => {
  * no longer appear when pressing the button since its disabled.
  */
 for (child of document.querySelector("#form").children) {
-    child.addEventListener("change", () => {
-        if (document.querySelector("#form").checkValidity()) {
-            document.querySelector("#formSubmit").disabled = false
+    child.addEventListener("input", () => {
+        if (
+            document.querySelector("#form").checkValidity() &&
+            formPasswordElements[0].value === formPasswordElements[1].value
+        ) {
+            document.querySelector("#formSubmit").disabled = false;
         } else {
-            document.querySelector("#formSubmit").disabled = true
+            document.querySelector("#formSubmit").disabled = true;
         }
-    })
+    });
 }
